@@ -34,6 +34,8 @@
   <link href="css/style.css" rel="stylesheet" />
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
+  <!-- funcionalida html -->
+  <script src="visibilidad.js"></script>
 
 </head>
 
@@ -128,24 +130,26 @@
     </div>
     <!-- end header section -->
     
-    <!-- contact section -->
-    <div class="container mt-5">
-      <h1 class="mb-4">Encuesta de Evaluación Docente</h1>
-
-      <!-- Condición de cursado -->
-      <div class="mb-3">
-          <label for="condicion-cursado" class="form-label">1-Condición de cursado al momento de completar la encuesta:</label>
-          <select id="condicion-cursado" class="form-select">
-              <option>Promocional</option>
-              <option>Regular</option>
-              <option>Libre</option>
-          </select>
-      </div>
+<!-- Contact section -->
+<div class="container mt-5">
+  <h1 class="mb-4">Encuesta de Evaluación Docente</h1>
+  <!-- Condición de cursado -->
+  <form action="" method="post">
+    <div class="mb-3">
+      <label for="condicion-cursado" class="form-label">1-Condición de cursado al momento de completar la encuesta:</label>
+      <select id="condicion-cursado" class="form-select" required>
+        <option value="">Selecciona una opción</option>
+        <option>Promocional</option>
+        <option>Regular</option>
+        <option>Libre</option>
+      </select>
+    </div>
 
       <!-- Porcentaje de asistencia -->
       <div class="mb-3">
           <label for="asistencia" class="form-label">2-¿Qué porcentaje de asistencia tuviste en esta asignatura?</label>
-          <select id="asistencia" class="form-select">
+          <select id="asistencia" class="form-select" required>
+              <option value="">Selecciona una opción</option>
               <option>Más del 75%</option>
               <option>Entre el 50% y 75%</option>
               <option>Entre el 25% y 50%</option>
@@ -157,355 +161,398 @@
       <div class="mb-3">
           <label class="form-label">3-¿La/el docente corresponde a la comisión en la que cursaste la asignatura?</label>
           <div>
-              <input type="radio" id="docente-si" name="docente-comision" value="Si">
+              <input type="radio" id="docente-si" name="docente-comision" value="Si" required  onclick="mostrarSection()">
               <label for="docente-si">Sí</label>
-              <input type="radio" id="docente-no" name="docente-comision" value="No">
+              <input type="radio" id="docente-no" name="docente-comision" value="No" onclick="mostrarSection()">
               <label for="docente-no">No</label>
           </div>
       </div>
 
       <!-- Tipo de clases desarrolladas -->
-      <section class="Yes">
-        <div class="mb-3">
-            <label class="form-label">4-¿Qué tipo de clases desarrolló la/el docente?(puedes marcar más de una opción):</label>
-            <div>
-                <input type="checkbox" id="teoricas" value="Solo teóricas">
-                <label for="teoricas">Solo teóricas</label><br>
-                <input type="checkbox" id="practicas" value="Solo prácticas">
-                <label for="practicas">Solo prácticas</label><br>
-                <input type="checkbox" id="teorico-practicas" value="Teórico-prácticas">
-                <label for="teorico-practicas">Teórico-prácticas</label><br>
-                <input type="checkbox" id="otras" value="Otras">
-                <label for="otras">Otras (ej. Talleres, módulos, seminarios, etc.)</label>
-            </div>
-        </div>
-
-        <div class="mb-3">
-          <label class="form-label">5-La/el docente tuvo a su cargo el desarrollo de: :</label>
-          <select class="form-select">
-              <option>Todas las clases.</option>
-              <option>Mas de 2 clases.</option>
-              <option>Menos de 2 clases.</option>
-          </select>
-        </div>
-
-        <!-- Frecuencia de comportamientos docentes -->
-        <h3>Indica con qué frecuencia la/el docente mostró los siguientes comportamientos frente a sus estudiantes: </h3>
-        <div class="mb-3">
-            <label class="form-label">*Permitió y respetó opiniones:</label>
-            <select class="form-select">
-                <option>Casi siempre</option>
-                <option>Frecuentemente</option>
-                <option>Con poca frecuencia</option>
-                <option>Casi nunca</option>
-                <option>No sabe / No contesta</option>
-            </select>
-        </div>
-
-        <div class="mb-3">
-            <label class="form-label">*Manifestó buena disposición al responder dudas:</label>
-            <select class="form-select">
-                <option>Casi siempre</option>
-                <option>Frecuentemente</option>
-                <option>Con poca frecuencia</option>
-                <option>Casi nunca</option>
-                <option>No sabe / No contesta</option>
-            </select>
-        </div>
-
-        <div class="mb-3">
-          <label class="form-label">*Fue respetuoso/a en el trato (clases, consultas, evaluaciones):</label>
-          <select class="form-select">
-              <option>Casi siempre</option>
-              <option>Frecuentemente</option>
-              <option>Con poca frecuencia</option>
-              <option>Casi nunca</option>
-              <option>No sabe / No contesta</option>
-          </select>
-        </div>
-
-        <div class="mb-3">
-          <label class="form-label">*La/el docente manifestó interés al llevar a cabo sus tareas (clases, consultas, evaluaciones);</label>
-          <select class="form-select">
-              <option>Casi siempre</option>
-              <option>Frecuentemente</option>
-              <option>Con poca frecuencia</option>
-              <option>Casi nunca</option>
-              <option>No sabe / No contesta</option>
-          </select>
-        </div>
-
-        <div class="mb-3">
-          <label class="form-label">*Brindó apoyo y/o contención a sus estudiantes:</label>
-          <select class="form-select">
-              <option>Casi siempre</option>
-              <option>Frecuentemente</option>
-              <option>Con poca frecuencia</option>
-              <option>Casi nunca</option>
-              <option>No sabe / No contesta</option>
-          </select>
-        </div>
-
-        <div class="mb-3">
-          <label class="form-label">*Atendió sus horarios de consulta</label>
-          <select class="form-select">
-              <option>Casi siempre</option>
-              <option>Frecuentemente</option>
-              <option>Con poca frecuencia</option>
-              <option>Casi nunca</option>
-              <option>No sabe / No contesta</option>
-              <option>No aisti a su consulta</option>
-          </select>
-        </div>
-
-        <div class="mb-3">
-          <label class="form-label">*Los criterios de evaluación fueron explicitados/comunicados:</label>
-          <select class="form-select">
-              <option>Casi siempre</option>
-              <option>Frecuentemente</option>
-              <option>Con poca frecuencia</option>
-              <option>Casi nunca</option>
-              <option>No sabe / No contesta</option>
-          </select>
-        </div>
-
-        <div class="mb-3">
-          <label class="form-label">*La devolución de las correcciones de trabajos y/o evaluaciones fueron claras:</label>
-          <select class="form-select">
-              <option>Casi siempre</option>
-              <option>Frecuentemente</option>
-              <option>Con poca frecuencia</option>
-              <option>Casi nunca</option>
-              <option>No sabe / No contesta</option>
-          </select>
-        </div>
-
-        <div class="mb-3">
-          <label class="form-label"> *El/la docente utilizó los canales de comunicación que se acordaron:</label>
-          <select class="form-select">
-              <option>Casi siempre</option>
-              <option>Frecuentemente</option>
-              <option>Con poca frecuencia</option>
-              <option>Casi nunca</option>
-              <option>No sabe / No contesta</option>
-              <option>No utilice los canales</option>
-          </select>
-        </div>
-
-        <div class="mb-3">
-          <label class="form-label">*Indicó las normas de higiene y seguridad para el desarrollo de las clases:</label>
-          <select class="form-select">
-              <option>Casi siempre</option>
-              <option>Frecuentemente</option>
-              <option>Con poca frecuencia</option>
-              <option>Casi nunca</option>
-              <option>No sabe / No contesta</option>
-              <option>No corresponde en esta materia</option>
-
-          </select>
-        </div>
-        <!-- Fin de comportamiento -->
-        <!-- Frecuencias sobre las clases del docente -->
-        <h3>Particularmente en sus clases, la/el docente:</h3>
-        <div class="mb-3">
-            <label class="form-label">Explicó con claridad las temáticas:</label>
-            <select class="form-select">
-                <option>Casi siempre</option>
-                <option>Frecuentemente</option>
-                <option>Con poca frecuencia</option>
-                <option>Casi nunca</option>
-                <option>No sabe / No contesta</option>
-            </select>
-        </div>
-
-        <div class="mb-3">
-          <label class="form-label">Propuso ejemplos y/o ejercicios relacionados con la vida real y/o profesional (contexto actual):</label>
-          <select class="form-select">
-              <option>Casi siempre</option>
-              <option>Frecuentemente</option>
-              <option>Con poca frecuencia</option>
-              <option>Casi nunca</option>
-              <option>No sabe / No contesta</option>
-          </select>
-        </div>
-
-        <div class="mb-3">
-          <label class="form-label">Relacionó los temas nuevos con los anteriores (con otras asignaturas y/u otras unidades):</label>
-          <select class="form-select">
-              <option>Casi siempre</option>
-              <option>Frecuentemente</option>
-              <option>Con poca frecuencia</option>
-              <option>Casi nunca</option>
-              <option>No sabe / No contesta</option>
-          </select>
-        </div>
-
-        <div class="mb-3">
-          <label class="form-label">Utilizó materiales de apoyo o complementarios para desarrollar las clases:</label>
-          <select class="form-select">
-              <option>Casi siempre</option>
-              <option>Frecuentemente</option>
-              <option>Con poca frecuencia</option>
-              <option>Casi nunca</option>
-              <option>No sabe / No contesta</option>
-          </select>
-        </div>
-
-        <div class="mb-3">
-          <label class="form-label">Los materiales de apoyo o complementarios tuvieron adecuada organización y presentación:</label>
-          <select class="form-select">
-              <option>Casi siempre</option>
-              <option>Frecuentemente</option>
-              <option>Con poca frecuencia</option>
-              <option>Casi nunca</option>
-              <option>No sabe / No contesta</option>
-              <option>No utilizó</option>
-          </select>
-        </div>
-
-        <div class="mb-3">
-          <label class="form-label">Sus exposiciones/explicaciones (teóricas/teórico-prácticas/prácticas) aportaron a una mejor comprensión de los conceptos desarrollados en la clase y/o bibliografía:</label>
-          <select class="form-select">
-              <option>Casi siempre</option>
-              <option>Frecuentemente</option>
-              <option>Con poca frecuencia</option>
-              <option>Casi nunca</option>
-              <option>No sabe / No contesta</option>
-          </select>
-        </div>
-
-        <div class="mb-3">
-          <label class="form-label">Mediante las actividades prácticas mostró la utilidad o aplicación de la teoría:</label>
-          <select class="form-select">
-              <option>Casi siempre</option>
-              <option>Frecuentemente</option>
-              <option>Con poca frecuencia</option>
-              <option>Casi nunca</option>
-              <option>No sabe / No contesta</option>
-          </select>
-        </div>
-
-        <div class="mb-3">
-          <label class="form-label">Todos los temas evaluados fueron dados en clases (teóricas/teórico-prácticas/prácticas) u otros espacios de aprendizaje propuestos por el espacio curricular.:</label>
-          <select class="form-select">
-              <option>Casi siempre</option>
-              <option>Frecuentemente</option>
-              <option>Con poca frecuencia</option>
-              <option>Casi nunca</option>
-              <option>No sabe / No contesta</option>
-          </select>
-        </div>
-
-        <div class="mb-3">
-          <label class="form-label">Promovió el pensamiento crítico (reflexión, análisis):</label>
-          <select class="form-select">
-              <option>Casi siempre</option>
-              <option>Frecuentemente</option>
-              <option>Con poca frecuencia</option>
-              <option>Casi nunca</option>
-              <option>No sabe / No contesta</option>
-          </select>
-        </div>
-
-        <div class="mb-3">
-          <label class="form-label">Promovió el trabajo autónomo:</label>
-          <select class="form-select">
-              <option>Casi siempre</option>
-              <option>Frecuentemente</option>
-              <option>Con poca frecuencia</option>
-              <option>Casi nunca</option>
-              <option>No sabe / No contesta</option>
-          </select>
-        </div>
-
-        <div class="mb-3">
-          <label class="form-label">Promovió el trabajo en equipo de manera colaborativa:</label>
-          <select class="form-select">
-              <option>Casi siempre</option>
-              <option>Frecuentemente</option>
-              <option>Con poca frecuencia</option>
-              <option>Casi nunca</option>
-              <option>No sabe / No contesta</option>
-          </select>
-        </div>
-
-        <div class="mb-3">
-          <label class="form-label">Impulsó la participación de sus estudiantes para el intercambio de ideas.:</label>
-          <select class="form-select">
-              <option>Casi siempre</option>
-              <option>Frecuentemente</option>
-              <option>Con poca frecuencia</option>
-              <option>Casi nunca</option>
-              <option>No sabe / No contesta</option>
-          </select>
-        </div>
-
-        <div class="mb-3">
-          <label class="form-label">Motivó a participar en diferentes instancias de formación (talleres, jornadas, intercambios estudiantiles, cursos extracurriculares, etc.):</label>
-          <select class="form-select">
-              <option>Casi siempre</option>
-              <option>Frecuentemente</option>
-              <option>Con poca frecuencia</option>
-              <option>Casi nunca</option>
-              <option>No sabe / No contesta</option>
-          </select>
-        </div>
-
-        <div class="mb-3">
-          <label class="form-label">Indica si consideras que este espacio curricular (asignatura, módulo, seminario, entre otros) aportó a tu formación. :</label>
-          <select class="form-select">
-              <option>Mucho</option>
-              <option>Medianamente</option>
-              <option>Poco</option>
-              <option>Nada</option>
-              <option>No responde</option>
-          </select>
-          <div class="pregunta">
-            <p>¿Por que?</p>
-            <textarea id="respuestaPorQue" name="respuestaPorQue" rows="4" cols="50" placeholder="Escribe tu respuesta aquí..."></textarea>
+    
+      <section id="extra-section">
+          <div class="mb-3">
+            <!-- Comentarios adicionales -->
+              <label class="form-label">4-¿Qué tipo de clases desarrolló la/el docente? (puedes marcar más de una opción):</label>
+              <div>
+                  <input type="checkbox" id="teoricas" value="Solo teóricas">
+                  <label for="teoricas">Solo teóricas</label><br>
+                  <input type="checkbox" id="practicas" value="Solo prácticas">
+                  <label for="practicas">Solo prácticas</label><br>
+                  <input type="checkbox" id="teorico-practicas" value="Teórico-prácticas">
+                  <label for="teorico-practicas">Teórico-prácticas</label><br>
+                  <input type="checkbox" id="otras" value="Otras">
+                  <label for="otras">Otras (ej. Talleres, módulos, seminarios, etc.)</label>
+              </div>
           </div>
-        
-        </div>
 
-
-
-        <!-- Fin de frecuencia sobre clases del docente -->
-
-
-        <!-- Valoración del docente -->
-        <div class="mb-3">
+          <!-- Calificación -->
+          <div class="mb-3">
+              <label for="valoracion-docente" class="form-label">La/el docente tuvo a su cargo el desarrollo de: </label>
+              <select id="valoracion-docente" class="form-select" required>
+                  <option value="">Selecciona una opción</option>
+                  <option>Todas las clases </option>
+                  <option>Más de 2 clases </option>
+                  <option>Menos de 2 clases</option>
+              </select>
+          </div>
+      
+          <!-- Frecuencia de comportamientos docentes -->
+          <table>
+            <tr>
+                <th colspan="2">Indica con qué frecuencia la/el docente mostró los siguientes comportamientos frente a sus estudiantes:</th>
+            </tr>
+            <tr>
+                <td>Permitió y respetó opiniones:</td>
+                <td>
+                    <select class="form-select" required>
+                        <option value="">Selecciona una opción</option>
+                        <option>Casi siempre</option>
+                        <option>Frecuentemente</option>
+                        <option>Con poca frecuencia</option>
+                        <option>Casi nunca</option>
+                        <option>No sabe / No contesta</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Manifestó buena disposición al responder dudas:</td>
+                <td>
+                    <select class="form-select" required>
+                        <option value="">Selecciona una opción</option>
+                        <option>Casi siempre</option>
+                        <option>Frecuentemente</option>
+                        <option>Con poca frecuencia</option>
+                        <option>Casi nunca</option>
+                        <option>No sabe / No contesta</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Fue respetuoso/a en el trato (clases, consultas, evaluaciones):</td>
+                <td>
+                    <select class="form-select" required>
+                        <option value="">Selecciona una opción</option>
+                        <option>Casi siempre</option>
+                        <option>Frecuentemente</option>
+                        <option>Con poca frecuencia</option>
+                        <option>Casi nunca</option>
+                        <option>No sabe / No contesta</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>La/el docente manifestó interés al llevar a cabo sus tareas (clases, consultas, evaluaciones):</td>
+                <td>
+                    <select class="form-select" required>
+                        <option value="">Selecciona una opción</option>
+                        <option>Casi siempre</option>
+                        <option>Frecuentemente</option>
+                        <option>Con poca frecuencia</option>
+                        <option>Casi nunca</option>
+                        <option>No sabe / No contesta</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Brindó apoyo y/o contención a sus estudiantes:</td>
+                <td>
+                    <select class="form-select" required>
+                        <option value="">Selecciona una opción</option>
+                        <option>Casi siempre</option>
+                        <option>Frecuentemente</option>
+                        <option>Con poca frecuencia</option>
+                        <option>Casi nunca</option>
+                        <option>No sabe / No contesta</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Atendió sus horarios de consulta:</td>
+                <td>
+                    <select class="form-select" required>
+                        <option value="">Selecciona una opción</option>
+                        <option>Casi siempre</option>
+                        <option>Frecuentemente</option>
+                        <option>Con poca frecuencia</option>
+                        <option>Casi nunca</option>
+                        <option>No sabe / No contesta</option>
+                        <option>No asistí a su consulta</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Los criterios de evaluación fueron explicitados/comunicados:</td>
+                <td>
+                    <select class="form-select" required>
+                        <option value="">Selecciona una opción</option>
+                        <option>Casi siempre</option>
+                        <option>Frecuentemente</option>
+                        <option>Con poca frecuencia</option>
+                        <option>Casi nunca</option>
+                        <option>No sabe / No contesta</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>La devolución de las correcciones de trabajos y/o evaluaciones fueron claras:</td>
+                <td>
+                    <select class="form-select" required>
+                        <option value="">Selecciona una opción</option>
+                        <option>Casi siempre</option>
+                        <option>Frecuentemente</option>
+                        <option>Con poca frecuencia</option>
+                        <option>Casi nunca</option>
+                        <option>No sabe / No contesta</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>El/la docente utilizó los canales de comunicación que se acordaron:</td>
+                <td>
+                    <select class="form-select" required>
+                        <option value="">Selecciona una opción</option>
+                        <option>Casi siempre</option>
+                        <option>Frecuentemente</option>
+                        <option>Con poca frecuencia</option>
+                        <option>Casi nunca</option>
+                        <option>No sabe / No contesta</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Indicó las normas de higiene y seguridad para el desarrollo de las clases:</td>
+                <td>
+                    <select class="form-select" required>
+                        <option value="">Selecciona una opción</option>
+                        <option>Casi siempre</option>
+                        <option>Frecuentemente</option>
+                        <option>Con poca frecuencia</option>
+                        <option>Casi nunca</option>
+                        <option>No sabe / No contesta</option>
+                    </select>
+                </td>
+            </tr>
+            <table>
+              <tr>
+                  <th colspan="2">Particularmente en sus clases, la/el docente:</th>
+              </tr>
+              <tr>
+                  <td>Explicó con claridad las temáticas:</td>
+                  <td>
+                      <select class="form-select" required>
+                          <option value="">Selecciona una opción</option>
+                          <option>Casi siempre</option>
+                          <option>Frecuentemente</option>
+                          <option>Con poca frecuencia</option>
+                          <option>Casi nunca</option>
+                          <option>No sabe / No contesta</option>
+                      </select>
+                  </td>
+              </tr>
+              <tr>
+                  <td>Propuso ejemplos y/o ejercicios relacionados con la vida real y/o profesional (contexto actual):</td>
+                  <td>
+                      <select class="form-select" required>
+                          <option value="">Selecciona una opción</option>
+                          <option>Casi siempre</option>
+                          <option>Frecuentemente</option>
+                          <option>Con poca frecuencia</option>
+                          <option>Casi nunca</option>
+                          <option>No sabe / No contesta</option>
+                      </select>
+                  </td>
+              </tr>
+              <tr>
+                  <td>Relacionó los temas nuevos con los anteriores (con otras asignaturas y/u otras unidades):</td>
+                  <td>
+                      <select class="form-select" required>
+                          <option value="">Selecciona una opción</option>
+                          <option>Casi siempre</option>
+                          <option>Frecuentemente</option>
+                          <option>Con poca frecuencia</option>
+                          <option>Casi nunca</option>
+                          <option>No sabe / No contesta</option>
+                      </select>
+                  </td>
+              </tr>
+              <tr>
+                  <td>Utilizó materiales de apoyo o complementarios para desarrollar las clases:</td>
+                  <td>
+                      <select class="form-select" required>
+                          <option value="">Selecciona una opción</option>
+                          <option>Casi siempre</option>
+                          <option>Frecuentemente</option>
+                          <option>Con poca frecuencia</option>
+                          <option>Casi nunca</option>
+                          <option>No sabe / No contesta</option>
+                      </select>
+                  </td>
+              </tr>
+              <tr>
+                  <td>Los materiales de apoyo o complementarios tuvieron adecuada organización y presentación:</td>
+                  <td>
+                      <select class="form-select" required>
+                          <option value="">Selecciona una opción</option>
+                          <option>Casi siempre</option>
+                          <option>Frecuentemente</option>
+                          <option>Con poca frecuencia</option>
+                          <option>Casi nunca</option>
+                          <option>No sabe / No contesta</option>
+                      </select>
+                  </td>
+              </tr>
+              <tr>
+                  <td>Sus exposiciones/explicaciones (teóricas/teórico-prácticas/prácticas) aportaron a una mejor comprensión de los conceptos desarrollados en la clase y/o bibliografía:</td>
+                  <td>
+                      <select class="form-select" required>
+                          <option value="">Selecciona una opción</option>
+                          <option>Casi siempre</option>
+                          <option>Frecuentemente</option>
+                          <option>Con poca frecuencia</option>
+                          <option>Casi nunca</option>
+                          <option>No sabe / No contesta</option>
+                      </select>
+                  </td>
+              </tr>
+              <tr>
+                  <td>Mediante las actividades prácticas mostró la utilidad o aplicación de la teoría:</td>
+                  <td>
+                      <select class="form-select" required>
+                          <option value="">Selecciona una opción</option>
+                          <option>Casi siempre</option>
+                          <option>Frecuentemente</option>
+                          <option>Con poca frecuencia</option>
+                          <option>Casi nunca</option>
+                          <option>No sabe / No contesta</option>
+                      </select>
+                  </td>
+              </tr>
+              <tr>
+                  <td>Todos los temas evaluados fueron dados en clases (teóricas/teórico-prácticas/prácticas) u otros espacios de aprendizaje propuestos por el espacio curricular:</td>
+                  <td>
+                      <select class="form-select" required>
+                          <option value="">Selecciona una opción</option>
+                          <option>Casi siempre</option>
+                          <option>Frecuentemente</option>
+                          <option>Con poca frecuencia</option>
+                          <option>Casi nunca</option>
+                          <option>No sabe / No contesta</option>
+                      </select>
+                  </td>
+              </tr>
+            <tr>
+              <td>Promovió el pensamiento crítico (reflexión, análisis):</td>
+              <td>
+                  <select class="form-select" required>
+                      <option value="">Selecciona una opción</option>
+                      <option>Casi siempre</option>
+                      <option>Frecuentemente</option>
+                      <option>Con poca frecuencia</option>
+                      <option>Casi nunca</option>
+                      <option>No sabe / No contesta</option>
+                  </select>
+              </td>
+            </tr>
+            <tr>
+              <td>Promovió el trabajo autónomo:</td>
+              <td>
+                  <select class="form-select" required>
+                      <option value="">Selecciona una opción</option>
+                      <option>Casi siempre</option>
+                      <option>Frecuentemente</option>
+                      <option>Con poca frecuencia</option>
+                      <option>Casi nunca</option>
+                      <option>No sabe / No contesta</option>
+                  </select>
+              </td>
+            </tr>
+            <tr>
+              <td>Promovió el trabajo en equipo de manera colaborativa:</td>
+              <td>
+                  <select class="form-select" required>
+                      <option value="">Selecciona una opción</option>
+                      <option>Casi siempre</option>
+                      <option>Frecuentemente</option>
+                      <option>Con poca frecuencia</option>
+                      <option>Casi nunca</option>
+                      <option>No sabe / No contesta</option>
+                  </select>
+              </td>
+            </tr>
+            <tr>
+              <td>Impulsó la participación de sus estudiantes para el intercambio de ideas:</td>
+              <td>
+                  <select class="form-select" required>
+                      <option value="">Selecciona una opción</option>
+                      <option>Casi siempre</option>
+                      <option>Frecuentemente</option>
+                      <option>Con poca frecuencia</option>
+                      <option>Casi nunca</option>
+                      <option>No sabe / No contesta</option>
+                  </select>
+              </td>
+            </tr>
+            <tr>
+              <td>Motivó a participar en diferentes instancias de formación (talleres, jornadas, intercambios estudiantiles, cursos extracurriculares, etc.):</td>
+              <td>
+                  <select class="form-select" required>
+                      <option value="">Selecciona una opción</option>
+                      <option>Casi siempre</option>
+                      <option>Frecuentemente</option>
+                      <option>Con poca frecuencia</option>
+                      <option>Casi nunca</option>
+                      <option>No sabe / No contesta</option>
+                  </select>
+              </td>
+            </tr>
+          </table>
+          <tr>
+            <td>Indica si consideras que este espacio curricular (asignatura, módulo, seminario, entre otros) aportó a tu formación:</td>
+            <td>
+                <select class="form-select" required>
+                    <option value="">Selecciona una opción</option>
+                    <option>Casi siempre</option>
+                    <option>Frecuentemente</option>
+                    <option>Con poca frecuencia</option>
+                    <option>Casi nunca</option>
+                    <option>No sabe / No contesta</option>
+                </select>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+                <div class="pregunta">
+                    <p>¿Por qué?</p>
+                    <textarea id="respuestaPorQue" name="respuestaPorQue" rows="4" cols="50" placeholder="Escribe tu respuesta aquí..."></textarea>
+                </div>
+            </td>
+          </tr>
+              <!-- Valoración del docente -->
+          <div class="mb-3">
             <label for="valoracion-docente" class="form-label">Utilizando la escala propuesta, ingresa el puntaje con el que calificarías en forma global a la/el docente</label>
-            <select id="valoracion-docente" class="form-select">
-                <option>10 (Sobresaliente)</option>
-                <option>9 (Distinguido)</option>
-                <option>8 - 7 (Muy Bueno)</option>
-                <option>6 - 5 (Bueno)</option>
-                <option>4 (Suficiente)</option>
-                <option>3 - 2 - 1 (Insuficiente)</option>
+            <select id="valoracion-docente" class="form-select" required>
+              <option>10 (Sobresaliente)</option>
+              <option>9 (Distinguido)</option>
+              <option>8 - 7 (Muy Bueno)</option>
+              <option>6 - 5 (Bueno)</option>
+              <option>4 (Suficiente)</option>
+              <option>3 - 2 - 1 (Insuficiente)</option>
             </select>
-        </div>
-    
-    
-
-        <!-- Comentarios adicionales -->
-        <div class="mb-3">
-            <label for="comentarios" class="form-label">En este espacio puedes comunicar observaciones que le parezcan pertinentes, sobre aspectos del desempeño docente que estén considerados, o no considerados, en esta encuesta (no es obligatorio contestar):</label>
-            <textarea id="comentarios" class="form-control" rows="4" placeholder="Escribe aquí tus observaciones (opcional)"></textarea>
-        </div>
+          </div>
       </section>
+      
+      
 
-      <button type="submit" class="btn btn-primary">Enviar Encuesta</button>
-  </div>
-
-
-            </div>
-          </div>
-
-          </div>
-        </div>
+          <!-- Comentarios adicionales -->
+      <div class="mb-3">
+        <label for="comentarios" class="form-label">En este espacio puedes comunicar observaciones que le parezcan pertinentes, sobre aspectos del desempeño docente que estén considerados, o no considerados, en esta encuesta (no es obligatorio contestar):</label>
+        <textarea id="comentarios" class="form-control" rows="4" placeholder="Escribe aquí tus observaciones (opcional)"></textarea>
       </div>
-    </section>
-    
+      <button type="submit" class="btn btn-success">Enviar Encuesta</button>
+    </form>
+</div>
+
     <!-- end contact section -->
       <!-- info section -->
   <section class="info_section ">
