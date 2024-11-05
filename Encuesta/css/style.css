@@ -11,11 +11,19 @@ body {
   background-color: #ffffff;
   padding: 15px 35px;
 }
-/*Logo*/
-.navbar-brand img {  
+/* Estilo general del logo */
+.logo {
+  width: 150px; /* Tamaño para pantallas grandes */
   height: auto;
-  max-width:15% ;
 }
+
+/* Ajuste para pantallas más pequeñas */
+@media (max-width: 600px) {
+  .logo {
+      width: 100px; /* Ajusta el tamaño según lo necesites */
+  }
+}
+
 
 /*end header section*/
 
