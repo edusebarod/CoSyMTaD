@@ -139,12 +139,32 @@ body {
 #extra-section{
   display: none;
 }
+@media (max-width: 600px) {
+  table {
+    width: 100%;
+  }
+
+  tr {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  td {
+      width: 100%;
+  }
+
+  .form-select {
+      width: 100%;
+      margin-top: 8px; /* Espacio entre la pregunta y el select */
+  }
+}
 
 #one-section{
   display: none;
 }
 /* Estilo general para la tabla */
-table {
+.table {
   width: 100%;
   border-collapse: collapse; /* Elimina el espacio entre los bordes */
   margin: 20px 0;
@@ -154,7 +174,8 @@ table {
 }
 
 /* Estilo para los bordes de las celdas */
-table, th, td {
+
+.table, th, td {
   border: 1px solid #ddd;
 }
 
@@ -178,7 +199,7 @@ tr:nth-child(even) {
 }
 
 /* Estilo para la selección */
-select {
+.form-select {
   width: 100%;
   padding: 8px;
   margin: 5px 0;
