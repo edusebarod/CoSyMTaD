@@ -139,6 +139,10 @@ body {
 #extra-section{
   display: none;
 }
+
+#one-section{
+  display: none;
+}
 /* Estilo general para la tabla */
 table {
   width: 100%;
