@@ -7,21 +7,29 @@ body {
 
 /*header section*/
 
-.navbar-brand {
-  background-color: #ffffff;
-  padding: 15px 35px;
+.header_top {
+  background-color: #000000;
+   
 }
-/* Estilo general del logo */
-.logo {
+
+.a{
+  background-color: #ffffff;
+}
+img {
   width: 150px; /* Tamaño para pantallas grandes */
   height: auto;
 }
 
 /* Ajuste para pantallas más pequeñas */
 @media (max-width: 600px) {
-  .logo {
+  img {
       width: 100px; /* Ajusta el tamaño según lo necesites */
   }
+}
+
+
+a{
+  color: #a59f9f;
 }
 
 
@@ -109,7 +117,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: yellow;
+  color: rgb(143, 143, 133);
   font-size: 24px;
   margin-right: 10px;
 }
@@ -123,6 +131,7 @@ body {
   background-color: #000000;
   text-align: center;
 }
+
 
 .footer_section p {
   color: #ffffff;
