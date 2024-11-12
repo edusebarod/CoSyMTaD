@@ -106,6 +106,7 @@
 <!-- Contact section -->
 <div class="container mt-5">
   <h1 class="mb-4">Nombre del  Docente</h1>
+  <h2 class="mb-4">Espacio curricular</h2>
   <!-- Condición de cursado -->
   <form id= form action="" method="post">
     <div class="mb-3">
@@ -143,7 +144,7 @@
 
       <!-- Tipo de clases desarrolladas -->
     
-       <section id="one-section">
+       <fieldset id="one-section">
           <div class="mb-3">
             <!-- Comentarios adicionales -->
               <label class="form-label">4-¿Qué tipo de clases desarrolló la/el docente? (puedes marcar más de una opción):</label>
@@ -159,8 +160,8 @@
                   <textarea id="otras-texto" class="form-control" rows="4" placeholder="Escribe aquí las otras clases que desarrollo el docente."></textarea>
               </div>
           </div>
-        </section>
-        <section id="extra-section">
+       </fieldset>
+        <fieldset id="extra-section">
 
           <!-- Calificación -->
           <div class="mb-3">
@@ -517,7 +518,7 @@
               <option>3 - 2 - 1 (Insuficiente)</option>
             </select>
           </div>
-      </section>
+        </fieldset>
       
       
 
@@ -526,7 +527,8 @@
         <label for="comentarios" class="form-label">En este espacio puedes comunicar observaciones que le parezcan pertinentes, sobre aspectos del desempeño docente que estén considerados, o no considerados, en esta encuesta (no es obligatorio contestar):</label>
         <textarea id="comentarios" class="form-control" rows="4" placeholder="Escribe aquí tus observaciones (opcional)"></textarea>
       </div>
-      <button type="submit" class="btn btn-success">Enviar Encuesta</button>
+      <button type="submit" class="btn btn-success mb-5">Enviar Encuesta</button>
+
     </form>
 </div>
 
