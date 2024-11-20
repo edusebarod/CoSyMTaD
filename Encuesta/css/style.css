@@ -172,6 +172,13 @@ a{
 #one-section{
   display: none;
 }
+
+#error-message {
+  color: red; /* Texto en rojo para indicar el error */
+  margin-top: 10px; /* Espaciado para que no se pegue al checkbox */
+  font-size: 14px; /* Tamaño de fuente para que el mensaje sea visible, pero no excesivo */
+  display: none; /* Ocultamos el mensaje por defecto */
+}
 /* Estilo general para la tabla */
 .table {
   width: 100%;

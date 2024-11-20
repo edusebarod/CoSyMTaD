@@ -1,43 +1,40 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- Site Metas -->
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
 
-<head>
-  <!-- Basic -->
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <!-- Mobile Metas -->
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <!-- Site Metas -->
-  <meta name="keywords" content="" />
-  <meta name="description" content="" />
-  <meta name="author" content="" />
-
-  <title>Encuesta</title>
+    <title>Encuesta</title>
 
 
-  <!-- bootstrap core css -->
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    <!-- bootstrap core css -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
 
-  <!-- fonts style -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <!-- fonts style -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
 
-  <!--owl slider stylesheet -->
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <!--owl slider stylesheet -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
 
-  <!-- font awesome style -->
-  <link href="css/font-awesome.min.css" rel="stylesheet" />
-  <!-- nice select -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css" integrity="sha256-mLBIhmBvigTFWPSCtvdu6a76T+3Xyt+K571hupeFLg4=" crossorigin="anonymous" />
-  <!-- datepicker -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.css">
-  <!-- Custom styles for this template -->
-  <link href="css/style.css" rel="stylesheet" />
-  <!-- responsive style -->
-  <link href="css/responsive.css" rel="stylesheet" />
-  <!-- funcionalida html -->
-  <script src="visibilidad.js"></script>
-
-</head>
+    <!-- font awesome style -->
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+    <!-- nice select -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css" integrity="sha256-mLBIhmBvigTFWPSCtvdu6a76T+3Xyt+K571hupeFLg4=" crossorigin="anonymous" />
+    <!-- datepicker -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.css">
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet" />
+    <!-- responsive style -->
+    <link href="css/responsive.css" rel="stylesheet" />
+    <!-- funcionalida html -->
+    <script src="visibilidad.js"></script>
+  </head>
 <body class="sub_page">
 
   <div class="hero_area">
@@ -144,7 +141,7 @@
 
       <!-- Tipo de clases desarrolladas -->
     
-       <fieldset id="one-section">
+       <section id="one-section">
           <div class="mb-3">
             <!-- Comentarios adicionales -->
               <label class="form-label">4-¿Qué tipo de clases desarrolló la/el docente? (puedes marcar más de una opción):</label>
@@ -160,13 +157,13 @@
                   <textarea id="otras-texto" class="form-control" rows="4" placeholder="Escribe aquí las otras clases que desarrollo el docente."></textarea>
               </div>
           </div>
-       </fieldset>
-        <fieldset id="extra-section">
+       </section>
+        <section id="extra-section">
 
           <!-- Calificación -->
           <div class="mb-3">
               <label for="valoracion-docente" class="form-label">La/el docente tuvo a su cargo el desarrollo de: </label>
-              <select id="valoracion-docente" class="form-select" required>
+              <select id="valoracion-docente" class="form-select" required >
                   <option value="">Selecciona una opción</option>
                   <option>Todas las clases </option>
                   <option>Más de 2 clases </option>
@@ -182,7 +179,7 @@
             <tr>
                 <td>Permitió y respetó opiniones:</td>
                 <td>
-                    <select class="form-select" required>
+                    <select class="form-select" required >
                         <option value="">Selecciona una opción</option>
                         <option>Casi siempre</option>
                         <option>Frecuentemente</option>
@@ -195,7 +192,7 @@
             <tr>
                 <td>Manifestó buena disposición al responder dudas:</td>
                 <td>
-                    <select class="form-select" required>
+                    <select class="form-select" >
                         <option value="">Selecciona una opción</option>
                         <option>Casi siempre</option>
                         <option>Frecuentemente</option>
@@ -208,7 +205,7 @@
             <tr>
                 <td>Fue respetuoso/a en el trato (clases, consultas, evaluaciones):</td>
                 <td>
-                    <select class="form-select" required>
+                    <select class="form-select" required >
                         <option value="">Selecciona una opción</option>
                         <option>Casi siempre</option>
                         <option>Frecuentemente</option>
@@ -221,7 +218,7 @@
             <tr>
                 <td>La/el docente manifestó interés al llevar a cabo sus tareas (clases, consultas, evaluaciones):</td>
                 <td>
-                    <select class="form-select" required>
+                    <select class="form-select" required name="valoracion-docente">
                         <option value="">Selecciona una opción</option>
                         <option>Casi siempre</option>
                         <option>Frecuentemente</option>
@@ -234,7 +231,7 @@
             <tr>
                 <td>Brindó apoyo y/o contención a sus estudiantes:</td>
                 <td>
-                    <select class="form-select" required>
+                    <select class="form-select" required name="valoracion-docente">
                         <option value="">Selecciona una opción</option>
                         <option>Casi siempre</option>
                         <option>Frecuentemente</option>
@@ -247,7 +244,7 @@
             <tr>
                 <td>Atendió sus horarios de consulta:</td>
                 <td>
-                    <select class="form-select" required>
+                    <select class="form-select" required name="valoracion-docente">
                         <option value="">Selecciona una opción</option>
                         <option>Casi siempre</option>
                         <option>Frecuentemente</option>
@@ -261,7 +258,7 @@
             <tr>
                 <td>Los criterios de evaluación fueron explicitados/comunicados:</td>
                 <td>
-                    <select class="form-select" required>
+                    <select class="form-select" required name="valoracion-docente">
                         <option value="">Selecciona una opción</option>
                         <option>Casi siempre</option>
                         <option>Frecuentemente</option>
@@ -274,7 +271,7 @@
             <tr>
                 <td>La devolución de las correcciones de trabajos y/o evaluaciones fueron claras:</td>
                 <td>
-                    <select class="form-select" required>
+                    <select class="form-select" required name="valoracion-docente">
                         <option value="">Selecciona una opción</option>
                         <option>Casi siempre</option>
                         <option>Frecuentemente</option>
@@ -287,7 +284,7 @@
             <tr>
                 <td>El/la docente utilizó los canales de comunicación que se acordaron:</td>
                 <td>
-                    <select class="form-select" required>
+                    <select class="form-select" required >
                         <option value="">Selecciona una opción</option>
                         <option>Casi siempre</option>
                         <option>Frecuentemente</option>
@@ -300,7 +297,7 @@
             <tr>
                 <td>Indicó las normas de higiene y seguridad para el desarrollo de las clases:</td>
                 <td>
-                    <select class="form-select" required>
+                    <select class="form-select" required >
                         <option value="">Selecciona una opción</option>
                         <option>Casi siempre</option>
                         <option>Frecuentemente</option>
@@ -318,7 +315,7 @@
             <tr>
                 <td>Explicó con claridad las temáticas:</td>
                 <td>
-                  <select class="form-select" required>
+                  <select class="form-select" required >
                     <option value="">Selecciona una opción</option>
                     <option>Casi siempre</option>
                     <option>Frecuentemente</option>
@@ -331,7 +328,7 @@
             <tr>
                 <td>Propuso ejemplos y/o ejercicios relacionados con la vida real y/o profesional (contexto actual):</td>
                 <td>
-                  <select class="form-select" required>
+                  <select class="form-select" required name="valoracion-docente">
                     <option value="">Selecciona una opción</option>
                     <option>Casi siempre</option>
                     <option>Frecuentemente</option>
@@ -344,7 +341,7 @@
             <tr>
                 <td>Relacionó los temas nuevos con los anteriores (con otras asignaturas y/u otras unidades):</td>
                 <td>
-                  <select class="form-select" required>
+                  <select class="form-select" required name="valoracion-docente">
                     <option value="">Selecciona una opción</option>
                     <option>Casi siempre</option>
                     <option>Frecuentemente</option>
@@ -357,7 +354,7 @@
             <tr>
                 <td>Utilizó materiales de apoyo o complementarios para desarrollar las clases:</td>
                 <td>
-                  <select class="form-select" required>
+                  <select class="form-select" required name="valoracion-docente">
                     <option value="">Selecciona una opción</option>
                     <option>Casi siempre</option>
                     <option>Frecuentemente</option>
@@ -370,7 +367,7 @@
             <tr>
                 <td>Los materiales de apoyo o complementarios tuvieron adecuada organización y presentación:</td>
                 <td>
-                  <select class="form-select" required>
+                  <select class="form-select" required name="valoracion-docente">
                     <option value="">Selecciona una opción</option>
                     <option>Casi siempre</option>
                     <option>Frecuentemente</option>
@@ -383,7 +380,7 @@
             <tr>
                 <td>Sus exposiciones/explicaciones (teóricas/teórico-prácticas/prácticas) aportaron a una mejor comprensión de los conceptos desarrollados en la clase y/o bibliografía:</td>
                 <td>
-                  <select class="form-select" required>
+                  <select class="form-select" required >
                     <option value="">Selecciona una opción</option>
                     <option>Casi siempre</option>
                     <option>Frecuentemente</option>
@@ -396,7 +393,7 @@
             <tr>
                 <td>Mediante las actividades prácticas mostró la utilidad o aplicación de la teoría:</td>
                 <td>
-                  <select class="form-select" required>
+                  <select class="form-select" required name="valoracion-docente">
                     <option value="">Selecciona una opción</option>
                     <option>Casi siempre</option>
                     <option>Frecuentemente</option>
@@ -409,7 +406,7 @@
             <tr>
                 <td>Todos los temas evaluados fueron dados en clases (teóricas/teórico-prácticas/prácticas) u otros espacios de aprendizaje propuestos por el espacio curricular:</td>
                 <td>
-                  <select class="form-select" required>
+                  <select class="form-select" required >
                     <option value="">Selecciona una opción</option>
                     <option>Casi siempre</option>
                     <option>Frecuentemente</option>
@@ -422,7 +419,7 @@
             <tr>
               <td>Promovió el pensamiento crítico (reflexión, análisis):</td>
               <td>
-                  <select class="form-select" required>
+                  <select class="form-select" required name="valoracion-docente">
                     <option value="">Selecciona una opción</option>
                     <option>Casi siempre</option>
                     <option>Frecuentemente</option>
@@ -435,7 +432,7 @@
             <tr>
               <td>Promovió el trabajo autónomo:</td>
               <td>
-                  <select class="form-select" required>
+                  <select class="form-select" required name="valoracion-docente">
                     <option value="">Selecciona una opción</option>
                     <option>Casi siempre</option>
                     <option>Frecuentemente</option>
@@ -448,7 +445,7 @@
             <tr>
               <td>Promovió el trabajo en equipo de manera colaborativa:</td>
               <td>
-                  <select class="form-select" required>
+                  <select class="form-select" required name="valoracion-docente">
                     <option value="">Selecciona una opción</option>
                     <option>Casi siempre</option>
                     <option>Frecuentemente</option>
@@ -461,7 +458,7 @@
             <tr>
               <td>Impulsó la participación de sus estudiantes para el intercambio de ideas:</td>
               <td>
-                  <select class="form-select" required>
+                  <select class="form-select" required name="valoracion-docente">
                     <option value="">Selecciona una opción</option>
                     <option>Casi siempre</option>
                     <option>Frecuentemente</option>
@@ -474,7 +471,7 @@
             <tr>
               <td>Motivó a participar en diferentes instancias de formación (talleres, jornadas, intercambios estudiantiles, cursos extracurriculares, etc.):</td>
               <td>
-                  <select class="form-select" required>
+                  <select class="form-select" required name="valoracion-docente">
                     <option value="">Selecciona una opción</option>
                     <option>Casi siempre</option>
                     <option>Frecuentemente</option>
@@ -484,7 +481,7 @@
                   </select>
               </td>
             </tr>
-          </table>
+          </table> 
           <tr>
             <td>Indica si consideras que este espacio curricular (asignatura, módulo, seminario, entre otros) aportó a tu formación:</td>
             <td>
@@ -509,7 +506,8 @@
               <!-- Valoración del docente -->
           <div class="mb-3">
             <label for="valoracion-docente" class="form-label">Utilizando la escala propuesta, ingresa el puntaje con el que calificarías en forma global a la/el docente</label>
-            <select id="valoracion-docente" class="form-select" required>
+            <select id="valoracion-docente" class="form-select" required >
+              <option value="">Selecciona una opción</option>
               <option>10 (Sobresaliente)</option>
               <option>9 (Distinguido)</option>
               <option>8 - 7 (Muy Bueno)</option>
@@ -518,7 +516,7 @@
               <option>3 - 2 - 1 (Insuficiente)</option>
             </select>
           </div>
-        </fieldset>
+        </section>
       
       
 
@@ -528,6 +526,7 @@
         <textarea id="comentarios" class="form-control" rows="4" placeholder="Escribe aquí tus observaciones (opcional)"></textarea>
       </div>
       <button type="submit" class="btn btn-success mb-5">Enviar Encuesta</button>
+      <div id="error-message">Por favor, complete todas las preguntas antes de enviar el formulario..</div>
 
     </form>
 </div>
