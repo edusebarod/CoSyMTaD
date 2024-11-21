@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Créditos</title>
+    <link href="./css/creditos.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header_top">
+        <h1></h1>
+    </header>
+
+    <!-- Contenido principal -->
+    <main>
+        <p>
+            La implementación del presente instrumento fue desarrollada por estudiantes de la Carrera Tecnicatura Superior 
+            en Desarrollo de Software del Instituto Técnico Superior Córdoba, en el marco de una pasantía curricular de la 
+            asignatura Práctica Profesionalizante II en convenio con la Facultad de Ciencias Agropecuarias de la Universidad 
+            Nacional de Córdoba. El desarrollo tomó como requerimiento el diseño de una encuesta elaborado por la Comisión 
+            de Seguimiento y Mejora de la Tarea Docente.
+        </p>
+
+        <h2>Equipo de Trabajo:</h2>
+        <ul>
+            <li>Janet Mamani</li>
+            <li>Enzo Medina</li>
+            <li>Lorena Ramos </li>
+            <li>Andrea Suarez</li>
+        </ul>
+
+        <p><strong>Coordinador (ITSC):</strong> Ernesto Gallo</p>
+        <p><strong>Tutor (FCA-UNC):</strong> Eduardo Rodriguez Pesce</p>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer_section">
+        <p>
+            &copy; <span id="displayYear"></span> 
+            <a href="encuesta.html">Volver al inicio</a>
+        </p>
+    </footer>
+
+    <!-- Script para actualizar el año dinámicamente -->
+    <script>
+        document.getElementById('displayYear').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
